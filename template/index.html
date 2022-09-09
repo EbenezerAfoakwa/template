@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Lad Brothers Car Rent Website</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        /* BUTTON-48 */
+        .button-48 {
+            appearance: none;
+            background-color: #0AA1DD;
+            border-width: 0;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Clarkson, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1em;
+            opacity: 1;
+            outline: 0;
+            padding: 1em 2.2em;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            text-rendering: geometricprecision;
+            /* text-transform: uppercase; */
+            transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: baseline;
+            white-space: nowrap;
+            border-radius: 2px;
+        }
+
+        .button-48:before {
+            animation: opacityFallbackOut .5s step-end forwards;
+            backface-visibility: hidden;
+            background-color: #161e26c7;
+            clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transform: translateZ(0);
+            transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+            width: 100%;
+            color: #fff;
+        }
+
+        .button-48:hover {
+            color: #fff;
+        }
+
+        .button-48:hover:before {
+            animation: opacityFallbackIn 0s step-start forwards;
+            clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+            border-radius: 2px;
+            color: #fff;
+        }
+
+        .button-48:after {
+            background-color: #FFFFFF;
+            color: #fff;
+        }
+
+        .button-48 span {
+            z-index: 1;
+            position: relative;
+        }
+
+        /* BUTTON-48 */
+    </style>
+</head>
+
+<body>
+    <header class="header-area overlay">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand"><img src="images/ladlogo.jpg" alt="">Lad Brothers</a>
+
+                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </button>
+
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a href="#" class="nav-item nav-link">About Us</a></li>
+                        <li class="dropdown">
+                          <a href="gallary/gallary.php" class="nav-item nav-link" data-toggle="dropdown">Category</a>
+                          <div class="dropdown-menu">
+                            <a href="gallary/gallary.php" class="dropdown-item">Economy</a>
+                            <a href="gallary/gallary.php" class="dropdown-item">Compact</a>
+                            <a href="gallary/gallary.php" class="dropdown-item">Premium</a>
+                          </div>
+                        </li>
+                        <li><a href="tel:0240263545" class="nav-item nav-link">+233240263545</a></li>
+                        <li><a href="users/logins/login.php" class="nav-item nav-link">Sign In</a></li>
+                        <li><a href="admins/logins/index.php" class="nav-item nav-link">
+                            <button class="button-48" role="button"><span class="text" style="font-size: 16px;">Admins Only</span></button></a>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </nav>
+        <img src="images/image_header.jpg" alt="" style="width: 100%;">
+    </header>
+
+
+
+
+
+
+
+
+    <main>
+        <div class="insideheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="header-text">
+                            <div align="left">
+
+                                <div class="banner1">
+                                    <div class="typed_wrap">
+                                        <h1><span class="typed"></span></h1>
+
+                                    </div>
+                                </div>
+
+
+                                <h2>Luxury Cars at
+                                    low-cost, starts <span style="color: #0AA1DD;">270 cedis / day</span> </h2>
+
+                                <h3>
+                                    from over 100 premium locations</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div id="form-body" class="col-lg-4">
+                        <form class="form-group" action="https://formsubmit.co/nyaw6468@gmail.com" method="POST">
+
+                            <input type="hidden" name="_subject" value="New Request!">
+                            <div class="inside">
+                                <div class="bcolor1">
+                                    <label for="pdate">PICK UP DATE:</label>
+                                    <input type="date" id="pdate" name="pick_up_date" required style="background-color: #fff;">
+                                </div>
+
+                                <div class="bcolor2">
+                                    <label for="ddate">DROP-OFF DATE:</label>
+                                    <input type="date" id="ddate" name="drop_off_date" required style="background-color: #fff;">
+                                </div>
+
+                                <div class="bcolor2">
+                                    <label for="cartype">MAKERS OF VEHICLES:</label>
+                                    <select name="cartype" id="cartype" required style="background-color: #fff;">
+                                        <option value="">Select option</option>
+                                        <option value="Mercedes">Mercedes</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Nissan">Nissan</option>
+                                        <option value="Hundaii">Hundai</option>
+                                        <option value="Honda">Honda</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Bugati">Bugati</option>
+                                        <option value="Ferrari">Ferrari</option>
+                                    </select>
+                                </div>
+
+                                <div align="center">
+                                    <button type="submit" class="button-48" role="button"
+                                        style="margin-top: 30px; padding: 14px 42px; font-size: 16px;"><span class="text">RentCar</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="message">
+            <div class="container">
+                <h4>COMPARE RENTAL CAR CLASSES</h4>
+
+                <br>
+                <p style="text-align: justify;">
+                    Choose from a variety of rental cars in this category including economy, compact or premium and the
+                    likes. Whether you are looking for fuel-efficiency, space, or comfort and style you are sure to find
+                    the perfect rental car no matter whether you are going on a quick family visit or an adventurous
+                    road trip.
+                </p>
+
+
+
+
+                <div id="card" class="row">
+                    <div class="col-lg-4">
+                        <div class="box" align="center">
+                            <h4>
+                                <u>ECONOMY</u>
+                            </h4>
+
+                            <p style="font-size:13px; ">Mitsubishi Mirage or similar</p>
+
+                            <img src="images/economy.jpg" alt="" style="width: 100%;">
+
+                            <div style="font-size: 13px; margin-bottom: 30px;">
+                                <span><i class="fa-solid fa-network-wired fa-sm" style="color: #65696b;"></i>
+                                    Automatic</span> <span><i class="fa-solid fa-user fa-sm"
+                                        style="margin-left: 10px; color: #65696b;"></i>4 People</span> <span><i
+                                        class="fa-solid fa-bag-shopping fa-sm"
+                                        style="margin-left: 10px;color: #65696b;"></i>2Bags</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="col-lg-4">
+                        <div class="box" align="center">
+                            <h4>
+                                <u>COMPACT</u>
+                            </h4>
+
+                            <p style="font-size:13px; ">Nissan Versa or similar</p>
+
+                            <img src="images/compact.jpg" alt="" style="width: 100%;">
+
+                            <div style="font-size: 13px; margin-bottom: 30px;">
+                                <span><i class="fa-solid fa-network-wired fa-sm" style="color: #65696b;"></i>
+                                    Automatic</span> <span><i class="fa-solid fa-user fa-sm"
+                                        style="margin-left: 10px; color: #65696b;"></i>5 People</span> <span><i
+                                        class="fa-solid fa-bag-shopping fa-sm"
+                                        style="margin-left: 10px;color: #65696b;"></i>2Bags</span>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="col-lg-4">
+                        <div class="box" align="center">
+                            <h4>
+                                <u>PREMIUM</u>
+                            </h4>
+
+                            <p style="font-size:13px; ">Chevrolet Impala or similar</p>
+
+                            <img src="images/premium.jpg" alt="" style="width: 100%;">
+
+                            <div style="font-size: 13px; margin-bottom: 30px;">
+                                <span><i class="fa-solid fa-network-wired fa-sm" style="color: #65696b;"></i>
+                                    Automatic</span> <span><i class="fa-solid fa-user fa-sm"
+                                        style="margin-left: 10px; color: #65696b;"></i>4 People</span> <span><i
+                                        class="fa-solid fa-bag-shopping fa-sm"
+                                        style="margin-left: 10px;color: #65696b;"></i>2Bags</span>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div align="center">
+                    <a href="gallary.php">
+                        <button class="button-48" role="button" style="margin-top: 60px; padding: 14px 48px;"><span
+                                class="text" style="font-size: 16px;">View All</span></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="video-wrapper" style="background-color: #161e26;">
+            <video playsinline autoplay muted loop poster="cake.jpg">
+                <source src="videos/Car showroom buyer.mp4" type="video/webm">
+
+            </video>
+
+            <div class="header">
+                <div class="container">
+                    <h4>HOW DOES LAD BROTHERS RENTAL WORKS
+                    </h4>
+                    <br>
+                    <div class="row">
+                        <div id="three" class="col-lg-4 col-md-4">
+                            <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+                            <h2 style="font-size: 15px;">
+                                Once seected, Book
+                                our auto and set a
+                                pickup date / time
+                            </h2>
+                        </div>
+                        <div id="three" class="col-lg-4 col-md-4">
+                            <i class="fa-solid fa-location-dot fa-3x"></i>
+                            <h2 style="font-size: 15px;">
+                                Once seected, Book
+                                our auto and set a
+                                pickup date / time
+                            </h2>
+                        </div>
+                        <div id="three" class="col-lg-4 col-md-4">
+                            <i class="fa-solid fa-car fa-3x"></i>
+                            <h2 style="font-size: 15px;">
+                                Once seected, Book
+                                our auto and set a
+                                pickup date / time
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="about">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>LAD BROTHERS
+                            RENTAL SERVICES
+                            WITH A WIDE RANGE OF VEHICLES
+                        </h4>
+
+                        <p>
+                            Lad Brothers is Ghana's fastest growing online car rental platform in Accra, Ghana
+                            connecting car owners in Accra to prospective clients looking for cars to rent on the go
+                            with convenience and affordability at your finger tip. With Lad Brothers, simply book your
+                            car, get a confirmation and you will have it delivered right at your doorstep.
+                        </p>
+
+                        <p>You can find Lad Brothers office at Sakumono near The Sak. Community Hospital. We work 24/7
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="col-lg-6">
+                        <img src="images/young-happy-man-fastening-his-seatbelt-before-a-royalty-free-image-1627662398.jpeg"
+                            alt="" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="popular-cars">
+            <div class="container">
+
+                <h4>AVAILABLE CARS</h4>
+
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="images/economy.jpg" height="400" width="500" alt="" />
+                            <p style="background-color: #000;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="slide">
+                            <img src="images/compact.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/premium.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/economy.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/compact.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/premium.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/economy.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/compact.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/premium.jpg" height="400" width="500" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="images/economy.jpg" height="400" width="500" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- CONTACT US -->
+        <div class="container">
+            <div class="section">
+                <div id="contact">
+
+                    <div class="row">
+                        <div id="contact-bg" class="col-lg-6">
+                            <h4>CONTACT US
+                            </h4>
+                            <form class="form-group" action="https://formsubmit.co/nyaw6468@gmail.com" method="POST">
+
+                                <input type="hidden" name="_subject" value="New Request!">
+
+                                <div class="form-group" style="padding-top: 15px;">
+                                    <div>
+                                        <label for="formGroupExampleInput" style="font-size: 13px;">Full
+                                            Name</label>
+                                        <input type="text" class="form-control" name="full_name"
+                                            style="padding: 20px; font-size: 14px;">
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="padding-top: 15px;">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <label for="formGroupExampleInput" style="font-size: 13px;">Email</label>
+                                            <input type="email" class="form-control" name="email"
+                                                style="padding: 20px; font-size: 14px;">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <label for="formGroupExampleInput" style="font-size: 13px;">Phone
+                                                Number</label>
+                                            <input type="number" class="form-control" name="telephone"
+                                                style="padding: 20px; font-size: 14px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group" style="padding-top: 15px;">
+                                    <label for="formGroupExampleInput" style="font-size: 13px;">Message</label>
+                                    <textarea id="subject" name="subject" placeholder="Write something.."
+                                        style="height:100px; background-color: #fff; font-size: 14px;"></textarea>
+                                </div>
+
+
+
+                                <div class="form-button">
+                                    <button type="submit" class="button-48" role="button" name="submit"><span class="text"
+                                            style="font-size: 16px;">Submit</span></button>
+                                </div>
+
+                            </form>
+                        </div>
+
+
+                        <div id="what-they-say" class="col-lg-6">
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="testimony">
+
+                                            <div class="head">
+                                                <p>
+                                                    CUSTOMERS REVIEW
+                                                </p>
+                                            </div>
+
+
+                                            <h2>What Our Clients Say About
+                                                Us</h2>
+
+                                            <div id="message">
+                                                <p>
+                                                    This is a team that pays great attention to detail and does great
+                                                    work.
+                                                    I
+                                                    had a design done for my website by a separate designer, and Nick
+                                                    implemented the design perfectly for both mobile and desktop. His
+                                                    team
+                                                    uses
+                                                    project management software to track tasks and break up the work for
+                                                    his
+                                                    team into sprints. You aren’t just getting a developer when you hire
+                                                    Emma,
+                                                    you’re also getting great project management and organization. I
+                                                    100%
+                                                    recommended.
+                                                </p>
+                                            </div>
+
+
+                                            <h5
+                                                style="padding-top: 20px; color: #40514e; font-size: 20px; font-weight: 700;">
+                                                Abraham
+                                                Narh
+                                            </h5>
+                                            <p style="color: #0AA1DD; font-size:14px; padding: 10px 0px 10px;">
+                                                Project Lead, Hundredfold Studios</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="testimony">
+
+                                            <div class="head">
+                                                <p>
+                                                    CUSTOMERS REVIEW
+                                                </p>
+                                            </div>
+
+                                            <h2>What Our Clients Say About
+                                                Us</h2>
+
+                                            <div id="message">
+                                                <p>
+                                                    This is a team that pays great attention to detail and does great
+                                                    work.
+                                                    I
+                                                    had a design done for my website by a separate designer, and Nick
+                                                    implemented the design perfectly for both mobile and desktop. His
+                                                    team
+                                                    uses
+                                                    project management software to track tasks and break up the work for
+                                                    his
+                                                    team into sprints. You aren’t just getting a developer when you hire
+                                                    Emma,
+                                                    you’re also getting great project management and organization. I
+                                                    100%
+                                                    recommended.
+                                                </p>
+                                            </div>
+
+
+                                            <h5
+                                                style="padding-top: 20px; color: #40514e;font-size: 20px; font-weight: 700;">
+                                                Abraham
+                                                Narh
+                                            </h5>
+                                            <p style="color: #0AA1DD; font-size:14px; padding: 10px 0px 10px;">
+                                                Project Lead, Hundredfold Studios</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="testimony">
+
+                                            <div class="head">
+                                                <p>
+                                                    CUSTOMERS REVIEW
+                                                </p>
+                                            </div>
+
+                                            <h2>What Our Clients Say About
+                                                Us</h2>
+
+                                            <div id="message">
+                                                <p>
+                                                    This is a team that pays great attention to detail and does great
+                                                    work.
+                                                    I
+                                                    had a design done for my website by a separate designer, and Nick
+                                                    implemented the design perfectly for both mobile and desktop. His
+                                                    team
+                                                    uses
+                                                    project management software to track tasks and break up the work for
+                                                    his
+                                                    team into sprints. You aren’t just getting a developer when you hire
+                                                    Emma,
+                                                    you’re also getting great project management and organization. I
+                                                    100%
+                                                    recommended.
+                                                </p>
+                                            </div>
+
+
+                                            <h5
+                                                style="padding-top: 20px; color: #40514e; font-size: 20px; font-weight: 700;">
+                                                Abraham
+                                                Narh
+                                            </h5>
+                                            <p style="color: #0AA1DD; font-size:14px; padding: 10px 0px 10px;">
+                                                Project Lead, Hundredfold Studios</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT US -->
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <p>
+                        Copyright © 2022 All Rights Reserved by Ebenezer Afoakwa.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"
+        integrity="sha512-mc/en2cJGERQ7tbCknGfDfDqGbOze0Cl7FQzmRmhWXOOA565kXOCf70fELatOAipHBd/Kk0VmSsyQTh9UkHU+w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://kit.fontawesome.com/93327aea62.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+
+
+</body>
+
+</html>

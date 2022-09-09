@@ -1,0 +1,2931 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: #fff;
+    color: #40514e;
+    /* background-color: #E3E3E3; */
+}
+
+h1 {
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+}
+
+p {
+    margin-bottom: 0.5em;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #161e26c7;
+}
+
+.header-area {
+    position: relative;
+    height: auto;
+
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repear;
+    background-size: cover;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-weight: 800;
+}
+
+.banner p {
+    font-weight: 700;
+}
+
+.navbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    transition: background 0.6s ease-in;
+    z-index: 99999;
+}
+
+.navbar .navbar-brand {
+    font-size: 16px;
+}
+
+.navbar .navbar-toggler {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar .navbar-toggler .menu-icon-bar {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+    transition: all 0.3s ease-in;
+}
+
+.navbar .navbar-toggler .menu-icon-bar:first-child {
+    opacity: 1;
+    -webkit-transform: translateY(-1px) rotate(45deg);
+    -ms-sform: translateY(-1px) rotate(45deg);
+    transform: translateY(-1px) rotate(45deg);
+}
+
+.navbar .navbar-toggler .menu-icon-bar:last-child {
+    opacity: 1;
+    -webkit-transform: translateY(-1px) rotate(135deg);
+    -ms-sform: translateY(-1px) rotate(135deg);
+    transform: translateY(-1px) rotate(135deg);
+}
+
+.navbar .navbar-toggler.collapsed .menu-icon-bar {
+    opacity: 1;
+}
+
+.navbar .navbar-toggler.collapsed .menu-icon-bar:first-child {
+    -webkit-transform: translateY(-7px) rotate(0);
+    -ms-sform: translateY(-7px) rotate(0);
+    transform: translateY(-7px) rotate(0);
+}
+
+.navbar .navbar-toggler.collapsed .menu-icon-bar:last-child {
+    -webkit-transform: translateY(5px) rotate(0);
+    -ms-sform: translateY(5px) rotate(0);
+    transform: translateY(5px) rotate(0);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar .dropdown-menu {
+    padding: 0;
+    background-color: #161e26;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    transition: color 0.2s ease-in;
+}
+
+.navbar .dropdown-menu .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background: transparent;
+    color: #0AA1DD;
+}
+
+.navbar .dropdown-menu .dropdown-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 5px;
+    background-color: #0AA1DD;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover::before {
+    opacity: 1;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    -webkit-animation: navbar-animation 0.6s;
+    animation: navbar-animation 0.6s;
+    background-color: #161e26;
+}
+
+.navbar.fixed-top.navbar-dark .navbar-nav .nav-link.active {
+    color: #0AA1DD;
+}
+
+.navbar.fixed-top.navbar-dark .navbar-nav .nav-link::after {
+    background-color: #0AA1DD;
+}
+
+.content {
+    padding: 120px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 20px;
+    }
+
+    .navbar-nav {
+        padding: 0 20px;
+        background-color: #161e26;
+    }
+
+    .navbar.fixed-top .navbar-nav {
+        background: transparent;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .banner {
+        padding: 0 150px;
+    }
+
+    .banner h1 {
+        font-size: 5rem;
+    }
+
+    .banner p {
+        font-size: 2rem;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 23px 15px;
+    }
+
+    .navbar-dark .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        left: 30%;
+        right: 30%;
+        height: 1px;
+        background-color: #fff;
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+        transition: transform 0.1s ease-in;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::after {
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    .dropdown-menu {
+        min-width: 200px;
+        -webkit-animation: dropdown-animation 0.3s;
+        animation: dropdown-animation 0.3s;
+        -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
+@-webkit-keyframes navbar-animation {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes navbar-animation {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes dropdown-animation {
+    0% {
+        -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+
+    75% {
+        -webkit-transform: scaleY(1.1);
+        -ms-transform: scaleY(1.1);
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes dropdown-animation {
+    0% {
+        -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+
+    75% {
+        -webkit-transform: scaleY(1.1);
+        -ms-transform: scaleY(1.1);
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* typed js */
+.banner1 {
+    display: block;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.typed_wrap {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.typed_wrap h1 {
+    display: inline;
+
+    font-weight: 700;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+    content: '|';
+    display: inline;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor {
+    opacity: 0;
+    display: none;
+}
+
+/*Custom cursor animation*/
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* typed js */
+
+
+
+
+
+
+
+
+
+
+
+
+.section {
+    width: 100%;
+    margin-top: 0px;
+
+}
+
+.inner {
+    padding: 0px 0px 20px 20px;
+}
+
+
+input[type=date],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+    color: #65696b;
+    background-color: #E3E3E3;
+}
+
+
+label {
+    width: 100%;
+    color: #65696b;
+    font-size: 12px;
+}
+
+
+.bcolor1 {
+    padding: 5px 10px;
+    margin-top: 10px;
+
+}
+
+.bcolor2 {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1750px);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1750px);
+    }
+}
+
+.slider {
+    background: white;
+    box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.slider::before, .slider::after {
+
+    content: "";
+    position: absolute;
+    height: 400px;
+    width: 500px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: 3500px;
+}
+
+.slider .slide {
+    height: 400px;
+    width: 500px;
+}
+
+/*# sourceMappingURL=index.css.map */
+
+
+
+
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+
+
+
+
+
+
+
+  @media screen and (min-width: 1500px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: 10px;
+    }
+    .button-48{
+        margin-top: -13px;
+    }
+
+    .insideheader .container{
+        margin-top: -39%;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 58px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 35px;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+    }
+
+    #form-body{
+        padding-left: 60px;
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 40px;
+    }
+
+
+
+    .message{
+        margin-top: 20%; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 15px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 100px;
+    }
+
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 50px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 14px 55px ; 
+        text-align: center; 
+        margin-bottom: 50px;
+    }
+    .container #contact-bg .form-button .button-48{
+        padding: 14px 55px ; 
+        margin: 15px 0px 15px;
+    }
+    .container #what-they-say .testimony {
+        padding: 0px 0px 0px 50px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 40px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 1500px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: 10px;
+    }
+    .button-48{
+        margin-top: -13px;
+    }
+
+    .insideheader .container{
+        margin-top: -560px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 58px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 35px;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+    }
+
+    #form-body{
+        padding-left: 60px;
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 40px;
+    }
+
+
+
+    .message{
+        margin-top: 220px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 15px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 100px;
+    }
+
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 50px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 14px 55px ; 
+        text-align: center; 
+        margin-bottom: 50px;
+    }
+    .container #contact-bg .form-button .button-48{
+        padding: 14px 55px ; 
+        margin: 15px 0px 15px;
+    }
+    .container #what-they-say .testimony {
+        padding: 0px 0px 0px 50px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 40px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 1400px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: 10px;
+    }
+    .button-48{
+        margin-top: -12px;
+    }
+
+
+    .insideheader .container{
+        margin-top: -540px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 58px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 35px;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+    }
+
+    #form-body{
+        padding-left: 60px;
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 40px;
+    }
+
+
+
+    .message{
+        margin-top: 220px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 15px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 100px;
+    }
+
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 50px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 50px;
+    }
+    .container #what-they-say .testimony {
+        padding: 0px 0px 0px 50px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 40px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 1300px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: 10px;
+    }
+    .button-48{
+        margin-top: -12px;
+    }
+
+    .insideheader .container{
+        margin-top: -540px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 58px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 35px;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+    }
+
+    #form-body{
+        padding-left: 60px;
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 40px;
+    }
+
+
+
+    .message{
+        margin-top: 220px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 15px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 100px;
+    }
+
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 50px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 50px;
+    }
+    .container #what-they-say .testimony {
+        padding: 0px 0px 0px 50px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 40px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 1200px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: 12px;
+    }
+    .button-48{
+        margin-top: -12px;
+    }
+
+    .insideheader .container{
+        margin-top: -510px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 58px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 35px;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+    }
+
+    #form-body{
+        padding-left: 60px;
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 40px;
+    }
+
+
+
+    .message{
+        margin-top: 190px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 15px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 100px;
+    }
+
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 50px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 50px;
+    }
+    .container #what-they-say .testimony {
+        padding: 0px 0px 0px 50px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 40px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 1100px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: 8px;
+    }
+    .button-48{
+        margin-top: -12px;
+    }
+
+    .insideheader .container{
+        margin-top: -480px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 48px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 35px;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+    }
+
+    #form-body{
+        padding-left: 60px;
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 40px;
+    }
+
+    .message{
+        margin-top: 150px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 15px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 100px;
+    }
+
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 50px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 50px;
+    }
+    .container #what-they-say .testimony {
+        padding: 0px 0px 0px 50px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 1000px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: 13px;
+    }
+    .button-48{
+        margin-top: -12px;
+    }
+
+    .insideheader .container{
+        margin-top: -450px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 48px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 35px;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+    }
+
+    #form-body{
+        padding-left: 60px;
+        margin-top: 20px;
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 10px 20px 30px;
+    }
+
+    .message{
+        margin-top: 140px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 15px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 100px;
+    }
+
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 50px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 50px;
+    }
+    .container #what-they-say .testimony {
+        padding: 0px 0px 0px 50px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: -8px;
+    }
+    .button-48{
+        margin-top: 2px;
+    }
+
+    .insideheader .container{
+        margin-top: -400px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .banner1 {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 50px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+        text-align: center;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px;
+        text-align: center;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    #form-body{
+        padding: 40px 50px 0px 40px;
+        margin-top: 260px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 10px 20px 30px 30px;
+    }
+
+    .message{
+        margin-top: 120px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 40px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #161e26; 
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 40px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 40px;
+        margin-top: 30px;
+    }
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 120px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+    .container #what-they-say .testimony {
+        padding: 130px 0px 140px 0px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 800px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: -8px;
+    }
+    .button-48{
+        margin-top: 2px;
+    }
+
+    .insideheader .container{
+        margin-top: -370px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .banner1 {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 45px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+        text-align: center;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px;
+        text-align: center;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    #form-body{
+        padding: 40px 50px 0px 40px;
+        margin-top: 240px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 10px 20px 30px 30px;
+    }
+
+    .message{
+        margin-top: 120px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 40px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #161e26; 
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 40px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 40px;
+        margin-top: 30px;
+    }
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 120px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+    .container #what-they-say .testimony {
+        padding: 130px 0px 140px 0px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 700px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: -8px;
+    }
+    .button-48{
+        margin-top: 2px;
+    }
+
+    .insideheader .container{
+        margin-top: -360px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .banner1 {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 40px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+        text-align: center;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px;
+        text-align: center;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    #form-body{
+        padding: 40px 50px 0px 40px;
+        margin-top: 170px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 10px 20px 30px 30px;
+    }
+
+    .message{
+        margin-top: 120px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 40px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #161e26; 
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 40px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 40px;
+        margin-top: 30px;
+    }
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 120px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+    .container #what-they-say .testimony {
+        padding: 130px 0px 140px 0px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 600px){
+    .navbar .navbar-brand  img{
+        width: 45px; 
+        height:45px; 
+        margin-top:-5px; 
+        margin-left: -8px;
+    }
+    .button-48{
+        margin-top: 2px;
+    }
+
+    .insideheader .container{
+        margin-top: -330px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+    }
+    .banner1 {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 40px; 
+        color: rgb(235, 235, 235); 
+        font-weight: 600;
+        text-align: center;
+    }
+    .insideheader .container .header-text h2{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px;
+        text-align: center;
+    }
+    .insideheader .container .header-text h3{
+        color: rgb(235, 235, 235); 
+        font-weight: 400; 
+        font-size: 25px; 
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    #form-body{
+        padding: 40px 50px 0px 40px;
+        margin-top: 170px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 10px 20px 30px 30px;
+    }
+
+    .message{
+        margin-top: 120px; 
+        margin-bottom: 110px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 40px 0px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #161e26; 
+    }
+    .video-wrapper .header .container h4{
+        font-size: 25px; 
+        font-weight: 600; 
+        margin: 0px 40px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 40px;
+        margin-top: 30px;
+    }
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 120px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 25px; 
+        font-weight: 600; 
+        line-height: 1.5;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 80px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 25px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button{
+        padding: 30px 0px 20px; 
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+    .container #what-they-say .testimony {
+        padding: 130px 0px 140px 0px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 25px; 
+        font-weight: 600;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 17px 20px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 500px){
+    .navbar .navbar-brand  img{
+        width: 35px; 
+        height:35px; 
+        margin-top:-5px; 
+        margin-left: -4px;
+    }
+    .button-48{
+        margin-top: 2px;
+    }
+
+    .insideheader .container{
+        margin-top: -0px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+        padding: 0px 20px;
+    }
+    .banner1 {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 25px; 
+        color: #40514e;
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: #40514e;
+        font-weight: 400; 
+        font-size: 20px;
+        text-align: center;
+    }
+    .insideheader .container .header-text h3{
+        color: #40514e;
+        font-weight: 400; 
+        font-size: 18px; 
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    #form-body{
+        margin: 0px 20px;
+        padding: 40px 10px 0px 0px;
+        margin-top: 100px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 50px 20px 30px 30px;
+    }
+
+    .message{
+        margin-top: 120px; 
+        margin-bottom: 110px;
+        padding: 0px 10px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 20px; 
+        font-weight: 600;
+        text-align: center;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 20px 0px 20px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 650px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: #161e26; 
+    }
+    .video-wrapper .header .container h4{
+        font-size: 20px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 40px;
+        margin-top: 30px;
+    }
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 120px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 20px; 
+        font-weight: 600; 
+        line-height: 1.5;
+        text-align: center;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars{
+        margin: 7px;
+    }
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 20px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+        padding: 0px 40x;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 40px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 20px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button .button-48{
+        padding: 14px 55px ; 
+        text-align: center; 
+        margin-bottom: 0px;
+    }
+    .container #what-they-say .testimony {
+        padding: 130px 0px 140px 0px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+        text-align: center;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 20px; 
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 7px 0px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+@media screen and (max-width: 400px){
+    .navbar .navbar-brand  img{
+        width: 35px; 
+        height:35px; 
+        margin-top:-5px; 
+        margin-left: -4px;
+    }
+    .button-48{
+        margin-top: 2px;
+    }
+
+    .insideheader .container{
+        margin-top: -0px;
+    }
+    .insideheader .container .header-text{
+        position: relative; 
+        z-index: 1000; 
+        margin-top: 90px;
+        padding: 0px 20px;
+    }
+    .banner1 {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .insideheader .container .header-text .banner1{
+        margin-bottom: 20px;
+    }
+    .insideheader .container .header-text .banner1 .typed_wrap h1{
+        font-size: 25px; 
+        color: #40514e;
+        font-weight: 600;
+    }
+    .insideheader .container .header-text h2{
+        color: #40514e;
+        font-weight: 400; 
+        font-size: 20px;
+        text-align: center;
+    }
+    .insideheader .container .header-text h3{
+        color: #40514e;
+        font-weight: 400; 
+        font-size: 18px; 
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    #form-body{
+        margin: 0px 20px;
+        padding: 20px 10px 0px 0px;
+        margin-top: 100px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+    }
+    .form-group{
+        background-color: #fff;
+    }
+    .form-group .inside{
+        padding: 50px 20px 30px 30px;
+    }
+
+    .message{
+        margin-top: 120px; 
+        margin-bottom: 110px;
+        padding: 0px 10px;
+    }
+    .message .container h4{
+        text-align: left; 
+        font-size: 20px; 
+        font-weight: 600;
+        text-align: center;
+    }
+    .message .container #card{
+        margin-top: 70px;
+    }
+    .message .container #card .box{
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+        padding: 20px 0px 20px;
+    }
+    .message .container #card .box h4{
+        font-size: 20px; 
+        color: #0AA1DD; 
+        font-weight: 500; 
+        margin: 30px 0px 20px;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        width: 100%;
+        height: 650px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: #161e26; 
+    }
+    .video-wrapper .header .container h4{
+        font-size: 20px; 
+        font-weight: 600; 
+        margin: 0px 0px;
+    }
+    .video-wrapper .header .container #three{
+        padding: 0px 20px;
+        margin-top: 30px;
+    }
+    .about{
+        height: auto; 
+        background-color: #fff; 
+        margin: 120px 10px 120px;
+    }
+    .about .container h4{
+        text-align: left; 
+        font-size: 20px; 
+        font-weight: 600; 
+        line-height: 1.5;
+        text-align: center;
+    }
+    .about .container p{
+        margin: 40px 0px; 
+        text-align: justify; 
+        line-height: 2;
+    }
+    
+    .popular-cars{
+        margin: 7px;
+    }
+    .popular-cars .container h4{
+        text-align: center; 
+        font-size: 20px; 
+        font-weight: 600; 
+        margin-bottom: 40px;
+        padding: 0px 40x;
+    }
+
+
+    .container .section #contact {
+        padding: 10px 20px 0px;
+    }
+    .container #contact-bg {
+        padding: 20px 40px;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        background-color: #fff;
+    }
+    .container #contact-bg h4{
+        text-align: center; 
+        font-size: 20px; 
+        font-weight: 600; 
+        padding: 20px;
+    }
+    .container #contact-bg .form-button .button-48{
+        padding: 14px 55px ; 
+        text-align: center; 
+        margin-bottom: 0px;
+    }
+    .container #what-they-say .testimony {
+        padding: 130px 0px 140px 0px;
+        text-align: justify;
+    }
+    .container #what-they-say .testimony .head p {
+        color: #0AA1DD;
+        font-size: 13px;
+        padding: 0px 0px 10px;
+        text-align: center;
+    }
+    .container #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 16px;
+    }
+    .container #what-they-say .testimony h2 {
+        padding: 0px 0px 20px;
+        font-size: 20px; 
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .footer{
+        background-color: #161e26; 
+        padding: 7px 0px; 
+        margin-top: -50px; 
+        position: relative; 
+        z-index: 10;
+    }
+    .footer p{
+        text-align: center; 
+        margin-top: 10px; 
+        color: #fff;
+    }
+}
+
